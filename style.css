@@ -261,18 +261,69 @@ input:focus, select:focus {
   padding: 20px 0;
 }
 
-/* Responsiveness for mobile */
-@media (max-width: 520px) {
+/* Mobile Responsiveness Fix */
+@media (max-width: 600px) {
+  body {
+    padding: 12px 8px;
+  }
+
+  .app-container {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Cards single column */
   .summary-section {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
+
+  /* Form rows single column */
   .form-row {
     flex-direction: column;
+    gap: 10px;
   }
+
+  .form-section, .history-section {
+    padding: 14px 12px;
+  }
+
   .history-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .filter-group {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .clear-btn {
+    width: 100%;
+  }
+
+  /* Transaction item mobile layout fix (Jo cut ho raha tha) */
+  .transaction-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+    padding: 12px 10px;
+  }
+
+  .transaction-info {
+    width: 100%;
+    word-break: break-word;
+  }
+
+  .transaction-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed #e2e8f0;
+    padding-top: 8px;
   }
 }
 /* Clear All Button Styling */
