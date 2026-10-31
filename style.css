@@ -2,25 +2,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 html, body {
   width: 100%;
+  max-width: 100vw;
   overflow-x: hidden;
+  background-color: #f7fafc;
+  color: #2d3748;
 }
 
 body {
-  background-color: #f4f7f6;
-  color: #333;
-  padding: 20px 12px;
-  display: flex;
-  justify-content: center;
+  padding: 16px 12px;
+  display: block;
 }
 
 .app-container {
   width: 100%;
-  max-width: 600px;
+  max-width: 580px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -28,10 +29,11 @@ body {
 
 .app-header {
   text-align: center;
+  padding: 4px 0;
 }
 
 .app-header h1 {
-  font-size: 24px;
+  font-size: 22px;
   color: #1a202c;
   margin-bottom: 4px;
 }
@@ -45,30 +47,31 @@ body {
 .summary-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 8px;
   width: 100%;
 }
 
 .summary-card {
   background: #ffffff;
-  padding: 14px 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  padding: 12px 6px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   text-align: center;
-  border-top: 4px solid #cbd5e0;
+  border-top: 3px solid #cbd5e0;
 }
 
 .summary-card h3 {
-  font-size: 11px;
+  font-size: 10px;
   text-transform: uppercase;
   color: #718096;
-  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
 }
 
 .summary-card p {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
-  word-break: break-all;
+  white-space: nowrap;
 }
 
 .summary-card.balance { border-top-color: #3182ce; }
@@ -81,16 +84,16 @@ body {
 /* 2. Form & History Sections */
 .form-section, .history-section {
   background: #ffffff;
-  padding: 18px 16px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
 
 .form-section h2, .history-header h2 {
-  font-size: 17px;
+  font-size: 16px;
   color: #2d3748;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 form {
@@ -103,7 +106,7 @@ form {
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   width: 100%;
 }
 
@@ -118,19 +121,20 @@ form {
 }
 
 label {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: #4a5568;
 }
 
 input, select {
   width: 100%;
-  padding: 10px 12px;
+  padding: 10px;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
   font-size: 14px;
   outline: none;
   background-color: #fff;
+  height: 42px;
 }
 
 input:focus, select:focus {
@@ -145,11 +149,8 @@ input:focus, select:focus {
   font-weight: 600;
   cursor: pointer;
   width: 100%;
-}
-
-.primary-btn {
+  color: #fff;
   background-color: #3182ce;
-  color: #ffffff;
 }
 
 /* 3. History Header & Controls */
@@ -157,38 +158,40 @@ input:focus, select:focus {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .filter-controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
 }
 
 .filter-group {
   display: flex;
   align-items: center;
   gap: 6px;
+  flex: 1;
 }
 
 .filter-group select {
-  padding: 6px 10px;
+  height: 36px;
+  padding: 4px 8px;
   font-size: 13px;
-  width: auto;
 }
 
 .clear-btn {
   background-color: #fff5f5;
   color: #e53e3e;
   border: 1px solid #feb2b2;
-  padding: 6px 12px;
+  padding: 8px 12px;
   border-radius: 6px;
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 /* 4. Transactions List */
@@ -196,7 +199,8 @@ input:focus, select:focus {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
+  width: 100%;
 }
 
 .transaction-item {
@@ -206,7 +210,7 @@ input:focus, select:focus {
   padding: 10px 12px;
   border-radius: 6px;
   background-color: #f7fafc;
-  border-left: 5px solid #cbd5e0;
+  border-left: 4px solid #cbd5e0;
 }
 
 .transaction-item.income-border { border-left-color: #38a169; }
@@ -255,27 +259,16 @@ input:focus, select:focus {
   padding: 16px 0;
 }
 
-/* Mobile Screens Rule */
-@media (max-width: 550px) {
+/* Mobile Screens */
+@media (max-width: 480px) {
   .summary-section {
     grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .form-row {
     flex-direction: column;
-  }
-
-  .filter-controls {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .filter-group {
-    justify-content: space-between;
-  }
-
-  .clear-btn {
-    width: 100%;
+    gap: 12px;
   }
 
   .transaction-item {

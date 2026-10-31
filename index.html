@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Personal Expense Tracker</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="app-container">
+  <main class="app-container">
     <header class="app-header">
       <h1>Expense Tracker</h1>
       <p>Manage your daily income and expenses</p>
     </header>
 
-    <!-- 1. Summary Cards Section -->
+    <!-- 1. Summary Cards -->
     <section class="summary-section">
       <div class="summary-card balance">
         <h3>Total Balance</h3>
@@ -38,7 +38,7 @@
 
         <div class="form-group">
           <label for="desc">Description</label>
-          <input type="text" id="desc" placeholder="e.g., Monthly Salary, Coffee" required>
+          <input type="text" id="desc" placeholder="e.g., Salary, Coffee" required>
         </div>
 
         <div class="form-row">
@@ -106,7 +106,7 @@
         <li class="empty-state">No transactions added yet.</li>
       </ul>
     </section>
-  </div>
+  </main>
 
   <script src="app.js"></script>
 </body>
