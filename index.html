@@ -34,7 +34,6 @@
     <section class="form-section">
       <h2 id="form-heading">Add New Transaction</h2>
       <form id="transaction-form">
-        <!-- Hidden input edit mode track karne ke liye -->
         <input type="hidden" id="edit-id" value="">
 
         <div class="form-group">
@@ -80,49 +79,34 @@
       </form>
     </section>
 
-    <!-- 3. Transaction History & Filter Section -->
+    <!-- 3. Transaction History Section -->
     <section class="history-section">
       <div class="history-header">
         <h2>Transaction History</h2>
         
-        <!-- Category Filter Dropdown -->
-        <div class="filter-group">
-          <label for="filter-category">Filter:</label>
-          <select id="filter-category">
-            <option value="all">All Categories</option>
-            <option value="Salary">Salary</option>
-            <option value="Food & Dining">Food & Dining</option>
-            <option value="Transportation">Transportation</option>
-            <option value="Shopping">Shopping</option>
-            <option value="Bills & Utilities">Bills & Utilities</option>
-            <option value="Other">Other</option>
-          </select>
+        <div class="filter-controls">
+          <div class="filter-group">
+            <label for="filter-category">Filter:</label>
+            <select id="filter-category">
+              <option value="all">All Categories</option>
+              <option value="Salary">Salary</option>
+              <option value="Food & Dining">Food & Dining</option>
+              <option value="Transportation">Transportation</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Bills & Utilities">Bills & Utilities</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <button id="clear-all-btn" class="clear-btn" type="button">Clear All</button>
         </div>
       </div>
 
-      <!-- Dynamically JavaScript se yahan rows populate hongi -->
       <ul id="transaction-list" class="transaction-list">
-        <!-- Example empty state -->
         <li class="empty-state">No transactions added yet.</li>
       </ul>
     </section>
   </div>
-  <!-- Is block ke baad add karein -->
-        <div class="filter-group">
-          <label for="filter-category">Filter:</label>
-          <select id="filter-category">
-            <option value="all">All Categories</option>
-            <option value="Salary">Salary</option>
-            <option value="Food & Dining">Food & Dining</option>
-            <option value="Transportation">Transportation</option>
-            <option value="Shopping">Shopping</option>
-            <option value="Bills & Utilities">Bills & Utilities</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-
-        <!-- NEW: Clear All Button yahan paste karo -->
-        <button id="clear-all-btn" class="clear-btn" type="button">Clear All</button>
 
   <script src="app.js"></script>
 </body>
